@@ -71,7 +71,7 @@ object SupabaseClient {
                             currentEmail = email
                             Log.d("Supabase", "SignUp Success! UserID: $currentUserId")
 
-                            // ✅ СОХРАНИТЬ В SHARED PREFERENCES
+
                             SharedPreferencesManager.saveUser(currentUserId, currentEmail)
 
                             mainHandler.post { callback(true, null) }
@@ -396,3 +396,7 @@ object SupabaseClient {
         mainHandler.post { callback(true) }
     }
 }
+
+
+
+
